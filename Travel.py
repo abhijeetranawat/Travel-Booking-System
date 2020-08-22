@@ -20,7 +20,7 @@ def date1():
 def createFile():
     p=date1()+".txt"
     file=open(p,'w')
-    file.write("WELCOME TO ASHOK TRAVELS !\nTicket No.\tAmount  \t     Time\n")
+    file.write("WELCOME TO ASHOK TRAVELS !\nTicket No.\t                    Amount  \t                          Time\n")
     file.close()
     return p
 
@@ -49,11 +49,12 @@ def book():
         a=int(input("Enter Source City No.\n"))
         b=int(input("Enter Destination City No.\n"))
 
-        if(a!=b and a,b>=1 and a,b<=6):
+        if(a!=b and a>=1 and b>=1 and a<=6 and b<=6):
             calcTicket(a,b)
             book()
         else:
             print("Invalid Input")
+            input("Press Enter")
             book()
     else:
         print("Invalid Input")
@@ -70,7 +71,7 @@ def calcTicket(a,b):
 def printTicket(ticNo,r):
     global filename
     print("\n\n\n\n\t\tYour Ticket Number is ",ticNo)
-    print("\t\t Amount",r)
+    print("\t\tAmount",r)
     print("\t\tPlease collect your Ticket Number")
     print("\t\t::::::::::::Thank You::::::::::::")
 
