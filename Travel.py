@@ -11,6 +11,7 @@ def time1():
     t=time.time()
     p=datetime.now()
     return str(p)[11:19]
+    print(t)
 
 def date1():
     p=datetime.now()
@@ -30,7 +31,7 @@ def ticketNumber(fname):
         if ord(i)>=48 and ord(i)<=57:
             b+=i
     c=b[:-6:-1]
-    d=int(b)-int(c)
+    d=int(b)-int(c)+int(str(datetime.now())[-6:])
     return str(d)
 
 def clear():
@@ -89,7 +90,7 @@ def writeFile(fn,p):
 
 def structure1():
     clear()
-    print("\t\tPress the Number\n\n1.  Start\n2.  Close\n")
+    print("Press the Number\n\n1.  Start\n2.  Close\n")
     n=input()
     if n=="1":
         clear()
